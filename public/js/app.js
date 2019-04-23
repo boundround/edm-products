@@ -3,6 +3,7 @@ console.log('From Client Side JS');
 fetch('/products').then((response) => {
   response.json().then((data) => {
     data.products.forEach((product) => {
+      console.log(product)
       drawProduct(product);
     })
   })
@@ -13,10 +14,16 @@ const drawProduct = (product) => {
   const template = Handlebars.compile(source);
   const productInfo = {
     dealname: product.dealname,
-    tagline: product.tagline
+    tagline: product.tagline,
+    datecreated: product.datecreated,
+    destination: product.destination,
+    id: product.id,
+    numberofnights: product.numberofnights,
+    peradultfrom: product.peradultfrom,
+    perchildfrom: product.perchildfrom,
+    photo: product.photo
   }
   const html = template(productInfo);
-  console.log(html)
   const productsContainer = document.querySelector('.products-container');
   productsContainer.innerHTML += html;
 }

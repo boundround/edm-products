@@ -16,14 +16,25 @@
   
   <script src="/js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+
+
   <script id="product-template" type="text/x-handlebars-template">
-    <div class="product">
+    <div class="product" style='background-image: url("\{{photo}}");width:100%'>
       <h1>\{{dealname}}</h1>
       <div class="body">
-        \{{tagline}}
+        Tagline: \{{tagline}}<br/>
+        Date Created: \{{datecreated}}<br/>
+        Destination: \{{destination}}<br/>
+        ID: \{{id}}<br/>
+        Number of Nights: \{{numberofnights}}<br/>
+        Per Adult From: \{{peradultfrom}}<br/>
+        Per Child From: \{{perchildfrom}}<br/>
+        \{{tagline}}<br/>
       </div>
     </div>
   </script>
+
+
 </body>
 
 </html>
