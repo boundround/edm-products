@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
-const hbs = require('hbs')
+const hbs = require('hbs');
+const getProducts = require('./utils/products')
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,10 +17,21 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
-  res.render('index', {
-    title: 'EDM Product Cards',
-    body: 'Bound Round'
+  res.render('', {
+    
+  });
+})
+
+app.get('/products', (req, res) => {
+  getProducts((error, products) => {
+    if (error) {
+      return res.send({error})
+    }
+    return res.send({
+      products: products
+    });
   })
+  
 })
 
 app.listen(port, () => {
