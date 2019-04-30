@@ -33,7 +33,7 @@ body {
 	}
 
 	.box .box {
-		background-color: rgba(128,128,128, 0.3);
+		background-color: rgba(128,128,128, 0.4);
 		color: #fff;
 	}
 
@@ -59,8 +59,7 @@ body {
     margin-right: -10px; 
     align-self: end;
     text-align: center;
-    font-weight: bold;
-    background-color: #444 !important;
+    background-color: var(--secondary-color) !important;
 	}
 
 	.c {
@@ -89,7 +88,7 @@ body {
 	}
   
   .f p{
-    font-size: 18%;
+    font-size: 20%;
     font-weight: normal;
     text-align: right;
 	}
@@ -105,7 +104,7 @@ body {
 	}
 
   .l p{
-    font-size: 18%;
+    font-size: 20%;
     font-weight: normal;
     text-align: right;
 	}
@@ -129,9 +128,12 @@ body {
   }
 
 .caption{
+  display: grid;
+  gap: 0;
+  grid-template-columns: 475px 170px;
+  grid-template-rows: repeat(2, 1fr);
   max-width: 650px;
   height: 80px;
-  margin-top: -1em;
   background-color: #fff;
   color: #4a4a4a;
 }
@@ -142,5 +144,27 @@ body {
 }
 
 .caption__marketing-tag{
+  grid-row: 2;
   padding: 0 0 0 1em;
+}
+
+.caption__read-more{
+  padding-top: 2em;
+  grid-column: 2;
+  grid-row: 1;
+  color: #fff;  
+  align-self: end;
+  text-align: left;
+}
+
+.caption__read-more span{
+  background-color: none;
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+  font-weight: bold;
+  font-size: 100%;
 }
