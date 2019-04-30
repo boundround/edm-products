@@ -1,5 +1,5 @@
 :root {
-  --sticker-width: 70px;
+  --sticker-width: 60px;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 		display: grid;
     gap: 5px;
 		grid-template-columns: 200px 200px 95px 140px;
-		grid-template-rows: 60px 40px 25px 70px 70px 70px 60px;
+		grid-template-rows: 60px 40px 40px 60px 60px 60px 10px;
 		color: #444;
     background-color: #ddd;
 	}
@@ -101,7 +101,19 @@ body {
     width: var(--sticker-width);
   }
 
-  .j {
-    grid-column: 1 / span 4;
-    grid-row: 7;
-  }
+.caption{
+  max-width: 650px;
+  height: 80px;
+  margin-top: -1em;
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+.caption__header{
+  padding: 1em 0.2em 0.2em 1em;
+  font-weight: bold;
+}
+
+.caption__marketing-tag{
+  padding: 0 0 0 1em;
+}
