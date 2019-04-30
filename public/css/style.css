@@ -1,12 +1,19 @@
 :root {
   --sticker-width: 60px;
+  --main-color: #FF1B57;
+  --secondary-color: #772384;
 }
 
 body {
   margin: 40px;
   font-family: Open Sans;
 }
-    
+  
+.outer-border{
+  width: 650px;
+  border-style: solid;
+  border-width: 1px;
+}
 	.wrapper {
     width: 650px;
 		display: grid;
@@ -15,6 +22,7 @@ body {
 		grid-template-rows: 60px 40px 40px 60px 60px 60px 10px;
 		color: #444;
     background-color: #ddd;
+    background-size: 100% auto;
 	}
 
 	.box {
@@ -25,62 +33,81 @@ body {
 	}
 
 	.box .box {
-		background-color: #ccc;
-		color: #444;
+		background-color: rgba(128,128,128, 0.3);
+		color: #fff;
 	}
+
+  .flexible-text{
+    background-color: #4a4a4a;
+    display:inline;
+    padding: 0.4em 0.5em 0.4em 0.5em;
+    background-color: var(--main-color);
+  }
 
 	.a {
     font-size: 180%;
     font-weight: bold;
 		grid-column: 1/span 2;
     align-self: end;
+    background: transparent;
+    margin-left: -0.4em;
 	}
 
 	.b {
-		grid-row: 3;
+		grid-row: 4;
     grid-column: 4 / 4;
     margin-right: -10px; 
     align-self: end;
+    text-align: center;
+    font-weight: bold;
+    background-color: #444 !important;
 	}
 
 	.c {
 	  grid-column: 1;
     grid-row: 2;
+    background: transparent;
+    margin-left: -0.7em;
 	}
 
 	.d{
     grid-column: 2 / span 3;
-    grid-row: 2 / span 5;
+    grid-row: 4;
 		display: grid;
 	  grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     background-color: transparent;
 	}
 
-	.e {
-		grid-row: 4;
-    grid-column: 3 / 3;
-    align-self: end;
-    margin-right: 5px;
-	}
-
 	.f {
-		grid-row: 5;
+		grid-row: 5/5;
     grid-column: 3 / 3;
     margin-right: 5px;
+    font-size: 360%;
+    font-weight: bold;
+    text-align: right;
+	}
+  
+  .f p{
+    font-size: 18%;
+    font-weight: normal;
+    text-align: right;
 	}
 
-  .k {
-		grid-row: 4;
-    grid-column: 4 / 4;
-    margin-right: -10px; 
-    align-self: end;
-	}
 
 	.l {
 		grid-row: 5;
     grid-column: 4 / 4;
     margin-right: -10px;
+    font-size: 360%;
+    font-weight: bold;
+    text-align: right;
+	}
+
+  .l p{
+    font-size: 18%;
+    font-weight: normal;
+    text-align: right;
 	}
 
   .g {
@@ -105,8 +132,8 @@ body {
   max-width: 650px;
   height: 80px;
   margin-top: -1em;
-  background-color: #4a4a4a;
-  color: #fff;
+  background-color: #fff;
+  color: #4a4a4a;
 }
 
 .caption__header{
