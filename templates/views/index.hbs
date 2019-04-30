@@ -12,33 +12,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
 
     <script id="product-template" type="text/x-handlebars-template">
-      <div class="outer-border">
-        <div class="wrapper" style="background-image: url('https://res.cloudinary.com/familytravel-com-au/image/fetch/c_scale,w_650/https://dqgr5tph2zdxx.cloudfront.net/photos/medium_23-day-tour-of-china-s-sink-road-and-russia-waterways-9a41b283-143a-4bb1-8282-e98d4a94d74f.jpg')">
-          <div class="box a"><span class="flexible-text">New Caledonia & Vietnam</span></div>
-          <div class="box c"><span class="flexible-text">5 or 7 nights</span></div>
-          <div class="box d">
-            <div class="box b">Kids stay free</div>
-            <div class="box f">
-              <p>Per adult from</p>
-              <span>$1,899</span>
+      <div style="padding-bottom:10px;">
+        <div class="outer-border">
+          <div class="wrapper" style="background-image: url('\{{photo}}'); background-size: 100% auto;">
+            <div class="box a">\{{destination}}</div>
+            <div class="box c">\{{numberofnights}}</div>
+            <div class="box d">
+              <div class="box b">\{{tagline}}</div>
+
+              <div class="box f">
+                <p>Per adult from</p>
+                <span>\{{peradultfrom}}</span>
+              </div>
+              <div class="box l">
+                <p>Per child from</p>
+                <span>\{{perchildfrom}}</span>
+              </div>
             </div>
-            <div class="box l">
-              <p>Per adult from</p>
-              <span>$1,599</span>
+            <div class="box g"> G </div>
+            <div class="box h"> H </div>
+            <div class="box i"> I </div>
+          </div>
+          <div class="caption"> 
+            <div class="caption_header">New Caledonia on Pacific Explorer</div>
+            <div class="caption_marketing-tag">Lorem Ipsum Some Description</div>
+            <div class="caption_read-more">
+              <span>Enquire Now</span> 
             </div>
           </div>
-          <div class="box g"> G </div>
-          <div class="box h"> H </div>
-          <div class="box i"> I </div>
         </div>
-        <div class="caption"> 
-          <div class="caption__header">New Caledonia on Pacific Explorer</div>
-          <div class="caption__marketing-tag">Lorem Ipsum Some Description</div>
-          <div class="caption__read-more">
-            <span>Enquire Now</span> 
-          </div>
-        </div>
-        </div>
+      </div>
     </script>
   </body>
 </html>

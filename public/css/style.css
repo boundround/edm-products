@@ -26,7 +26,7 @@ body {
 	}
 
 	.box {
-		background-color: #444;
+		background-color: transparent;
 		color: #fff;
 		border-radius: 5px;
 		padding: 10px;
@@ -113,18 +113,21 @@ body {
     grid-column: 1;
     grid-row: 4 / span 1;
     width: var(--sticker-width);
+    padding: 1.5em;
   }
 
   .h {
     grid-column: 1;
     grid-row: 5 / span 1;
     width: var(--sticker-width);
+    padding: 1.5em;
   }
   
   .i {
     grid-column: 1;
     grid-row: 6 / span 1;
     width: var(--sticker-width);
+    padding: 1.5em;
   }
 
 .caption{
@@ -138,17 +141,17 @@ body {
   color: #4a4a4a;
 }
 
-.caption__header{
+.caption_header{
   padding: 1em 0.2em 0.2em 1em;
   font-weight: bold;
 }
 
-.caption__marketing-tag{
+.caption_marketing-tag{
   grid-row: 2;
   padding: 0 0 0 1em;
 }
 
-.caption__read-more{
+.caption_read-more{
   padding-top: 2em;
   grid-column: 2;
   grid-row: 1;
@@ -157,7 +160,7 @@ body {
   text-align: left;
 }
 
-.caption__read-more span{
+.caption_read-more span{
   background-color: none;
   padding: 0.5em 2em 0.5em 2em;
   border-radius: 10px;
