@@ -149,6 +149,10 @@ body {
 .caption_marketing-tag{
   grid-row: 2;
   padding: 0 0 0 1em;
+  width: 450px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .caption_read-more{

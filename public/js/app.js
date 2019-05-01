@@ -3,7 +3,10 @@ console.log('From Client Side JS');
 fetch('/products').then((response) => {
   response.json().then((data) => {
     data.products.forEach((product) => {
-      console.log(product)
+      console.log(product);
+      if (product.perchildfrom == 0){
+        product.perchildfrom = "Free";
+      };
       drawProduct(product);
     })
   })
@@ -21,7 +24,8 @@ const drawProduct = (product) => {
     numberofnights: product.numberofnights,
     peradultfrom: product.peradultfrom,
     perchildfrom: product.perchildfrom,
-    photo: product.photo
+    photo: product.photo,
+    description: product.description
   }
   const html = template(productInfo);
   const productsContainer = document.querySelector('.products-container');
