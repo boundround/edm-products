@@ -4,9 +4,9 @@ fetch('/products').then((response) => {
   response.json().then((data) => {
     data.products.forEach((product) => {
       console.log(product);
-      if (product.perchildfrom == 0){
-        product.perchildfrom = "Free";
-      };
+      // if (product.perchildfrom == 0){
+      //   product.perchildfrom = "Free";
+      // };
       drawProduct(product);
     })
   })
@@ -16,15 +16,15 @@ const drawProduct = (product) => {
   const source = document.getElementById('product-template').innerHTML;
   const template = Handlebars.compile(source);
   const productInfo = {
-    dealname: product.dealname,
-    tagline: product.tagline,
-    datecreated: product.datecreated,
-    destination: product.destination,
+    dealname: product.name,
+    tagline: product.short_description,
+    datecreated: product.date_created,
+    destination: 'need destination',
     id: product.id,
-    numberofnights: product.numberofnights,
-    peradultfrom: product.peradultfrom,
-    perchildfrom: product.perchildfrom,
-    photo: product.photo,
+    numberofnights: 'need nights',
+    peradultfrom: '$999999',
+    perchildfrom: '$9999',
+    photo: product.images[0].src,
     description: product.description
   }
   const html = template(productInfo);
