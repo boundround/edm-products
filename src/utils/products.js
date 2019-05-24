@@ -26,21 +26,25 @@ const getProducts = (callback) => {
       } else if (response.body.length === 0) {
         callback('No live tour products.', undefined)
       } else {
+        //response.body.adultfrom = response.body.
+
         response.body.forEach((product) => {
-          product.meta_data.forEach((metadata) => {
-            if (metadata.key === '_price_text'){
-              var html = metadata.value;
-              var price = ''
-              htmlParser.parse(html, {
-                // attribute: (name, value) => {
-                //   if (value == 'price-text'){
-                    
-                //   }
-                // }
-                text: (value) => {
-                  console.log(value)
-                }
-              })
+          var $
+          product.meta_data.forEach((data) => {
+            if (data.key == '_price_text'){
+              $ = cheerio.load(data.value)
+              var text = $('.price-text').text()
+              product.fromadult = text
+            }
+            if (data.key == '_price_text_second') {
+              $ = cheerio.load(data.value)
+              var text = $('.price-text').text()
+              product.fromchild = text
+            }
+          })
+          product.attributes.forEach((data) => {
+            if (data.name == 'Duration' && data.visible) {
+              product.nights = data.options[0]
             }
           })
         })
