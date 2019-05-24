@@ -22,8 +22,8 @@ const drawProduct = (product) => {
     destination: 'need destination',
     id: product.id,
     numberofnights: 'need nights',
-    peradultfrom: '$999999',
-    perchildfrom: '$9999',
+    peradultfrom: product.fromadult,
+    perchildfrom: product.fromchild,
     photo: product.images[0].src,
     description: product.description
   }
