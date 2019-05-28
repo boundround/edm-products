@@ -146,6 +146,10 @@ body {
 .caption_header{
   padding: 1em 0.2em 0.2em 1em;
   font-weight: bold;
+  width: 450px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .caption_marketing-tag{
