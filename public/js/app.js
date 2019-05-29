@@ -4,6 +4,9 @@ fetch('/products').then((response) => {
   response.json().then((data) => {
     data.products.forEach((product) => {
       console.log(product);
+      if (product.fromchild == '$0'){
+        product.fromchild = "Free";
+      };
       drawProduct(product);
     })
   })
@@ -22,8 +25,7 @@ const drawProduct = (product) => {
     peradultfrom: product.fromadult,
     perchildfrom: product.fromchild,
     photo: product.images[0].src,
-    description: product.meta_data.filter(item => item.key == 'marketing_description')[0].value,
-    excerpt: 'One line excerpt'
+    description: product.meta_data.filter(item => item.key == 'marketing_description')[0].value
   }
   const html = template(productInfo);
   const productsContainer = document.querySelector('.products-container');
